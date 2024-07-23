@@ -14,25 +14,3 @@ window.addEventListener('load', () => {
     showTimelineElements();
   });
   
-  // Skills Hover Effect (using 'DOMContentLoaded' event)
-  document.addEventListener('DOMContentLoaded', () => {
-    const skillItems = document.querySelectorAll('.skill-item');
-  
-    skillItems.forEach(item => {
-      item.addEventListener('mouseenter', () => {
-        const details = item.querySelector('.skill-details');
-        details.style.display = 'block';
-  
-        // Adjust height for smooth transition
-        const height = details.offsetHeight;
-        item.style.height = `${item.offsetHeight + height}px`;
-      });
-  
-      item.addEventListener('mouseleave', () => {
-        const details = item.querySelector('.skill-details');
-        details.style.display = 'none';
-        item.style.height = 'auto';
-      });
-    });
-  });
-  
